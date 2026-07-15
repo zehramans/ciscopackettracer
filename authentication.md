@@ -13,7 +13,9 @@ This activates the AAA system. Even if user accounts already exist on the AAA se
 Next, the router was configured to communicate with the RADIUS server by specifying the server's IP address and a shared secret. This shared secret must be identical on both the router and the AAA server or authentication will fail.
 
 ```cisco
-radius-server host 192.168.1.10 key Cisco123
+radius server Router0
+address ipv4 192.168.1.1 #can configure ports here as well
+key Cisco123
 ```
 
 The following command was then used to create the authentication method:
